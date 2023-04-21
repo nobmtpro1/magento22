@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Robin_Bai1::banner_manager" title="Banner manager" module="Robin_Bai1"
+            sortOrder="20" resource="Robin_Bai1::banner_manager" action="banner/index/index" />
+        <add id="Robin_Bai1::banner_manager_list" title="Banner list" module="Robin_Bai1"
+            sortOrder="20" resource="Robin_Bai1::banner_manager" action="banner/index/index"
+            parent="Robin_Bai1::banner_manager" />
+        <add id="Robin_Bai1::banner_manager_new" title="Banner new" module="Robin_Bai1"
+            sortOrder="20" resource="Robin_Bai1::banner_manager" action="banner/index/new"
+            parent="Robin_Bai1::banner_manager" />
+    </menu>
+</config>

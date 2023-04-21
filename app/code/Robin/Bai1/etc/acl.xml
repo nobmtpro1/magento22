@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="Robin_Bai1::banner_manager" title="Banner manager" sortOrder="1">
+                    <resource id="Robin_Bai1::edit" title="Edit" sortOrder="10" />
+                    <resource id="Robin_Bai1::delete" title="Delete" sortOrder="99" />
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>
