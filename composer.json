@@ -83,7 +83,8 @@
         "pdepend/pdepend": "2.5.2",
         "friendsofphp/php-cs-fixer": "~2.2.1",
         "lusitanian/oauth": "~0.8.10",
-        "sebastian/phpcpd": "2.0.4"
+        "sebastian/phpcpd": "2.0.4",
+        "symfony/var-dumper": "^4.4"
     },
     "suggest": {
         "ext-pcntl": "Need for run processes in parallel mode"

@@ -181,5 +181,10 @@
                 </item>
             </argument>
         </column>
+        <actionsColumn name="actions" class="Robin\Bai1\Ui\Component\Listing\Column\BannerActions">
+            <settings>
+                <indexField>id</indexField>
+            </settings>
+        </actionsColumn>
     </columns>
 </listing>

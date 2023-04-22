@@ -43,6 +43,12 @@ class PostDataProcessor
                 );
             }
         }
+        if (!@$data['images'][0]['name']) {
+            $errorNo = false;
+            $this->messageManager->addErrorMessage(
+                __('To apply changes you should fill in hidden required "%1" field', "image")
+            );
+        }
         return $errorNo;
     }
 
