@@ -43,5 +43,33 @@ class UpgradeSchema implements UpgradeSchemaInterface
                 ]
             );
         }
+
+        if (version_compare($context->getVersion(), '1.0.5') < 0) {
+            $connection = $setup->getConnection();
+            $connection->addIndex(
+                $setup->getTable('banner'),
+                'index_image_link',
+                [
+                    'link'
+                ],
+                \Magento\Framework\DB\Adapter\AdapterInterface::INDEX_TYPE_FULLTEXT
+            );
+        }
+
+        if (version_compare($context->getVersion(), '1.0.6') < 0) {
+            $table = $setup->getTable('banner');
+
+            $setup->getConnection()
+                ->addIndex(
+                    $table,
+                    $setup->getIdxName(
+                        $table,
+                        ['image', 'link'],
+                        \Magento\Framework\DB\Adapter\AdapterInterface::INDEX_TYPE_FULLTEXT
+                    ),
+                    ['image', 'link'],
+                    \Magento\Framework\DB\Adapter\AdapterInterface::INDEX_TYPE_FULLTEXT
+                );
+        }
     }
 }

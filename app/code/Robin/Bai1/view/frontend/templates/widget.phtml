@@ -1,0 +1,17 @@
+<?php
+
+$data = $this->getData("banners");
+$mediaURL = $this->getData("mediaURL");
+echo $mediaURL;
+
+?>
+
+<ul>
+    <?php foreach ($data as $key => $value) : ?>
+        <li>
+            <a href="<?= @$value['link'] ?>">
+                <img src="<?= $mediaURL . @$value['image'] ?>" alt="">
+            </a>
+        </li>
+    <?php endforeach ?>
+</ul>

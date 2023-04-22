@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+    <widget id="Robin_Bai1_banner_widget" class="Robin\Bai1\Block\Banner\Widget\BannerWidget">
+        <label translate="true">Banner widget</label>
+        <description translate="true">Display banner</description>
+        <parameters>
+            <parameter name="auto" xsi:type="select" visible="true"
+                source_model="Magento\Config\Model\Config\Source\Yesno">
+                <label translate="true">Auto</label>
+            </parameter>
+            <parameter name="speed" xsi:type="text" required="true" visible="true">
+                <label translate="true">Speed</label>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>
