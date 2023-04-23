@@ -103,6 +103,20 @@
                 </item>
             </argument>
         </column>
+        <column name="url_key">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="filter" xsi:type="string">text</item>
+                    <item name="editor" xsi:type="array">
+                        <item name="editorType" xsi:type="string">text</item>
+                        <item name="validation" xsi:type="array">
+                            <item name="required-entry" xsi:type="boolean">true</item>
+                        </item>
+                    </item>
+                    <item name="label" xsi:type="string" translate="true">Url key</item>
+                </item>
+            </argument>
+        </column>
         <column name="created_at" class="Magento\Ui\Component\Listing\Columns\Date">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
@@ -123,5 +137,13 @@
                 </item>
             </argument>
         </column>
+        <actionsColumn name="actions"
+            class="Mageplaza\HelloWorld\Ui\Component\Listing\Column\PostActions">
+            <settings>
+                <indexField>post_id</indexField>
+                <resizeEnabled>false</resizeEnabled>
+                <resizeDefaultWidth>107</resizeDefaultWidth>
+            </settings>
+        </actionsColumn>
     </columns>
 </listing>
