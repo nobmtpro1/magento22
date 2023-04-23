@@ -17,4 +17,6 @@
                 name="resourceModel" xsi:type="string">Mageplaza\HelloWorld\Model\ResourceModel\Post</argument>
         </arguments>
     </virtualType>
+    <preference for="Mageplaza\HelloWorld\Api\PostManagementInterface"
+        type="Mageplaza\HelloWorld\Model\PostManagement" />
 </config>
