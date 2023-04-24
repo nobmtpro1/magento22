@@ -9,17 +9,20 @@
    xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
    <body>
       <referenceContainer name="header.container" htmlId="header" htmlClass="container-fluid">
-
          <referenceContainer name="header.panel.wrapper" remove="true" />
          <referenceContainer name="header-wrapper" remove="true" />
          <block class="Magento\Framework\View\Element\Template" name="myheader"
-            group="navigation-sections" template="Magento_Theme::myheader.phtml">
+            template="Magento_Theme::myheader.phtml">
             <arguments>
                <argument name="title" translate="true" xsi:type="string">Menu</argument>
             </arguments>
          </block>
       </referenceContainer>
 
+      <referenceContainer name="page.top" htmlId="my_page_top" htmlClass="container-fluid mb-5" htmlTag="div">
+         <block class="Mageplaza\HelloWorld\Block\Menu" name="my_menu"  before="navigation.sections" >
+         </block>
+      </referenceContainer>
 
       <!-- <move element="page.top" destination="header.container" after="header-wrapper" /> -->
 
