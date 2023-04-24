@@ -86,18 +86,19 @@ class Topmenu extends Template implements IdentityInterface
             'page_block_html_topmenu_gethtml_before',
             ['menu' => $this->getMenu(), 'block' => $this, 'request' => $this->getRequest()]
         );
-
+        
         $this->getMenu()->setOutermostClass($outermostClass);
         $this->getMenu()->setChildrenWrapClass($childrenWrapClass);
-
+        // dd($this->getMenu());
         $html = $this->_getHtml($this->getMenu(), $childrenWrapClass, $limit);
-
+       
         $transportObject = new \Magento\Framework\DataObject(['html' => $html]);
         $this->_eventManager->dispatch(
             'page_block_html_topmenu_gethtml_after',
             ['menu' => $this->getMenu(), 'transportObject' => $transportObject]
         );
         $html = $transportObject->getHtml();
+        
         return $html;
     }
 

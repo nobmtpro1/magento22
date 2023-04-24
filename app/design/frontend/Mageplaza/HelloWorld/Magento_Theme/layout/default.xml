@@ -19,9 +19,15 @@
          </block>
       </referenceContainer>
 
-      <referenceContainer name="page.top" htmlId="my_page_top" htmlClass="container-fluid mb-5" htmlTag="div">
-         <block class="Mageplaza\HelloWorld\Block\Menu" name="my_menu"  before="navigation.sections" >
+      <referenceContainer name="page.top" htmlId="my_page_top" htmlClass="container-fluid mb-5"
+         htmlTag="div">
+         <block class="Mageplaza\HelloWorld\Block\Menu" name="my_menu" before="navigation.sections">
          </block>
+      </referenceContainer>
+
+      <referenceContainer name="before.body.end">
+         <block class="Magento\Framework\View\Element\Template"
+            template="Magento_Theme::before_body_end.phtml" name="before_body_end" />
       </referenceContainer>
 
       <!-- <move element="page.top" destination="header.container" after="header-wrapper" /> -->

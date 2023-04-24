@@ -7,6 +7,8 @@
         <remove src="css/print.css" />
         <remove src="Magento_Weee::styles.css" />
         <remove src="Magento_Swatches::css/swatches.css" />
+        <remove src="requirejs/require.js"/>
+
         <css src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
             rel="stylesheet" src_type="url" />
         <css src="img/favicon.ico" rel="icon" />
